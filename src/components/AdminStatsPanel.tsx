@@ -16,15 +16,15 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
     <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 space-y-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Usage Overview</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Aggregated by anonymous browser fingerprint.</p>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Visão geral do uso</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Agregado por impressão digital anônima do navegador.</p>
         </div>
         <button
           onClick={onRefresh}
           className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
         >
           <RefreshCcw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
-          Refresh
+          Atualizar
         </button>
       </div>
 
@@ -35,21 +35,21 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
       )}
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <StatCard title="Total uploads" value={summary?.uploads || 0} />
-        <StatCard title="Via API key" value={summary?.apiUploads || 0} />
-        <StatCard title="Data transferred" value={formatBytes(summary?.bytes || 0)} />
+        <StatCard title="Total de envios" value={summary?.uploads || 0} />
+        <StatCard title="Através da chave API" value={summary?.apiUploads || 0} />
+        <StatCard title="Dados transferidos" value={formatBytes(summary?.bytes || 0)} />
       </div>
 
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-100 dark:divide-gray-700">
           <thead className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
             <tr>
-              <th className="px-4 py-3 text-left">Identity</th>
-              <th className="px-4 py-3 text-left">Uploads</th>
-              <th className="px-4 py-3 text-left">Last upload</th>
-              <th className="px-4 py-3 text-left md:table-cell hidden">Device / Agent</th>
-              <th className="px-4 py-3 text-left">Location</th>
-              <th className="px-4 py-3 text-left">Actions</th>
+              <th className="px-4 py-3 text-left">Identidade</th>
+              <th className="px-4 py-3 text-left">Envios</th>
+              <th className="px-4 py-3 text-left">Último envio</th>
+              <th className="px-4 py-3 text-left md:table-cell hidden">Dispositivo / Agente</th>
+              <th className="px-4 py-3 text-left">Localização</th>
+              <th className="px-4 py-3 text-left">Ações</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100 dark:divide-gray-700 text-sm text-gray-700 dark:text-gray-300">
@@ -57,7 +57,7 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
               <tr key={stat.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                 <td className="px-4 py-3">
                   <div className="font-mono text-xs text-gray-600 dark:text-gray-400">{stat.id.slice(0, 16)}...</div>
-                  <div className="text-xs text-gray-400 dark:text-gray-500">IP hash: {stat.ipHash}</div>
+                  <div className="text-xs text-gray-400 dark:text-gray-500">Hash de IP: {stat.ipHash}</div>
                 </td>
                 <td className="px-4 py-3">
                   <div className="font-semibold text-gray-900 dark:text-white">{stat.uploads}</div>
@@ -74,7 +74,7 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
                   <div className="flex items-center gap-2">
                     <HardDrive className="w-4 h-4 text-gray-400 dark:text-gray-500" />
                     <span className="truncate" title={stat.device || stat.browser}>
-                      {stat.device || stat.browser || "Unknown"}
+                      {stat.device || stat.browser || "Desconhecido"}
                     </span>
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400 truncate" title={stat.userAgent}>
@@ -93,7 +93,7 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
                     className="inline-flex items-center gap-1 px-2 py-1 rounded border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 text-xs"
                   >
                     <Trash2 className="w-4 h-4" />
-                    Remove
+                    Remover
                   </button>
                 </td>
               </tr>
@@ -101,7 +101,7 @@ export function AdminStatsPanel({ stats, summary, loading, error, onRefresh, onR
             {stats.length === 0 && !loading && (
               <tr>
                 <td colSpan={6} className="px-4 py-6 text-center text-gray-400 dark:text-gray-500">
-                  No usage data collected yet.
+                  Nenhum dado de uso coletado ainda.
                 </td>
               </tr>
             )}

@@ -44,7 +44,7 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Chaves API</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Gere chaves para uploads programáticos.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Gere chaves para envios programáticos.</p>
         </div>
       </div>
 
@@ -52,7 +52,7 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
         <input
           value={label}
           onChange={(event) => setLabel(event.target.value)}
-          placeholder="Label (optional)"
+          placeholder="Etiqueta (opcional)"
           className="flex-1 rounded-lg border border-gray-200 dark:border-gray-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
         />
         <button
