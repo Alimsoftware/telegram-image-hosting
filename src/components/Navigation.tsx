@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Upload, Shield, Code, Info, Menu, X, LogOut, Moon, Sun } from "lucide-react";
+import { Home as HomeIcon, Upload, Shield, Code, Info, Menu, X, LogOut, Moon, Sun } from "lucide-react";
 import type { User } from "../types";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
@@ -9,7 +9,8 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { id: "upload" as const, label: "Envio", icon: Upload, path: "/" },
+  { id: "home" as const, label: "Home", icon: HomeIcon, path: "/" },
+  { id: "upload" as const, label: "Enviar", icon: Upload, path: "/upload" },
   { id: "admin" as const, label: "Admin", icon: Shield, path: "/admin" },
   { id: "docs" as const, label: "Docs API", icon: Code, path: "/docs" },
   { id: "about" as const, label: "Sobre", icon: Info, path: "/about" },

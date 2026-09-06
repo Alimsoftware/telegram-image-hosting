@@ -73,7 +73,7 @@ export function PublicUpload() {
 
   const validateFile = (file: File) => {
     if (file.size > 5 * 1024 * 1024) {
-      alert(`${file.name} exceeds the 5MB limit.`);
+      alert(`${file.name} excede o limite de 5 MB.`);
       return false;
     }
 
@@ -88,7 +88,7 @@ export function PublicUpload() {
     ];
 
     if (!allowedTypes.includes(file.type)) {
-      alert(`${file.name} is not an accepted format.`);
+      alert(`${file.name} não é um formato aceito.`);
       return false;
     }
 

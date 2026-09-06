@@ -8,6 +8,7 @@ import { ApiDocs } from "./components/ApiDocs";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { FilePreviewPage } from "./pages/FilePreviewPage";
+import { Home } from "./pages/Home";
 import { useAuth } from "./hooks/useAuth";
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <Navigation user={user} onLogout={logout} />
       <main className="flex-1 transition-colors duration-200">
         <Routes>
-          <Route path="/" element={<PublicUpload />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/upload" element={<PublicUpload />} />
           <Route path="/admin" element={user ? <Dashboard user={user} onLogout={logout} /> : <LoginForm onLogin={login} />} />
           <Route path="/docs" element={<ApiDocs />} />
           <Route path="/about" element={<About />} />
