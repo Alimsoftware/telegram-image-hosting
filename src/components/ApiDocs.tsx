@@ -25,12 +25,12 @@ export function ApiDocs() {
           {copiedCode === id ? (
             <>
               <Check className="w-4 h-4" />
-              <span className="text-sm">Copied!</span>
+              <span className="text-sm">Copiado!</span>
             </>
           ) : (
             <>
               <Copy className="w-4 h-4" />
-              <span className="text-sm">Copy</span>
+              <span className="text-sm">Copiar</span>
             </>
           )}
         </button>

@@ -114,7 +114,7 @@ export function About() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-200 font-medium"
               >
                 <Github className="w-5 h-5" />
-                <span>View on GitHub</span>
+                <span>Visualizar no GitHub</span>
               </a>
             </div>
           </section>

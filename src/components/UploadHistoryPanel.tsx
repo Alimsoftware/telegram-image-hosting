@@ -71,7 +71,7 @@ export function UploadHistoryPanel({
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{title}</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            {totals.count} file{totals.count === 1 ? "" : "s"} saved locally - {formatBytes(totals.bytes)} total
+            {totals.count} arquivo{totals.count === 1 ? "" : "s"} salvo localmente - {formatBytes(totals.bytes)} total
           </p>
           {showWarning && (
             <p className="mt-2 text-sm text-amber-600 dark:text-amber-400">

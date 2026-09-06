@@ -9,10 +9,10 @@ interface NavigationProps {
 }
 
 const navItems = [
-  { id: "upload" as const, label: "Upload", icon: Upload, path: "/" },
+  { id: "upload" as const, label: "Envio", icon: Upload, path: "/" },
   { id: "admin" as const, label: "Admin", icon: Shield, path: "/admin" },
-  { id: "docs" as const, label: "API Docs", icon: Code, path: "/docs" },
-  { id: "about" as const, label: "About", icon: Info, path: "/about" },
+  { id: "docs" as const, label: "Docs API", icon: Code, path: "/docs" },
+  { id: "about" as const, label: "Sobre", icon: Info, path: "/about" },
 ];
 
 export function Navigation({ user, onLogout }: NavigationProps) {
@@ -109,8 +109,8 @@ export function Navigation({ user, onLogout }: NavigationProps) {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Telegram Image</h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">Self-hosted image hosting</p>
+                <h1 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">MemeIndex</h1>
+                <p className="text-xs text-gray-500 dark:text-gray-400 hidden sm:block">Seu indexador de memes</p>
               </div>
             </Link>
           </div>
@@ -126,13 +126,13 @@ export function Navigation({ user, onLogout }: NavigationProps) {
             </button>
             {user && (
               <div className="flex items-center gap-3 text-sm">
-                <span className="text-gray-600 dark:text-gray-300">Welcome, {user.username}</span>
+                <span className="text-gray-600 dark:text-gray-300">Bem-vindo, {user.username}</span>
                 <button
                   onClick={onLogout}
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 >
                   <LogOut className="w-4 h-4" />
-                  Logout
+                  Sair
                 </button>
               </div>
             )}
@@ -156,8 +156,8 @@ export function Navigation({ user, onLogout }: NavigationProps) {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="text-base font-semibold text-gray-900 dark:text-white">Telegram Image</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Quick actions</p>
+                <p className="text-base font-semibold text-gray-900 dark:text-white">MemeIndex</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Ações rápidas</p>
               </div>
             </Link>
             <button
@@ -178,7 +178,7 @@ export function Navigation({ user, onLogout }: NavigationProps) {
                 className="flex items-center gap-3 px-4 py-3 w-full rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
               >
                 {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                <span className="font-medium">{darkMode ? "Light Mode" : "Dark Mode"}</span>
+                <span className="font-medium">{darkMode ? "Modo Claro" : "Modo Escuro"}</span>
               </button>
             </div>
           </div>
@@ -194,7 +194,7 @@ export function Navigation({ user, onLogout }: NavigationProps) {
                 className="inline-flex items-center gap-2 px-4 py-2 w-full rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
               >
                 <LogOut className="w-4 h-4" />
-                Logout
+                Sair
               </button>
             </div>
           )}

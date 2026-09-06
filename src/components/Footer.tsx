@@ -12,7 +12,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
           <div className="flex items-center justify-center gap-2">
-            <span>&copy; {currentYear} Tas33n. All rights reserved.</span>
+            <span>&copy; {currentYear} Alimsoftware. Todos os direitos reservados.</span>
             <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
               <Send className="w-4 h-4 text-white" />
             </div>
@@ -26,7 +26,7 @@ export function Footer() {
         </div>
         <div className="space-y-2 text-xs">
           <p>Powered by Cloudflare & Telegram.</p>
-          <p>Developed by <a href={githubUrl} className="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">Tas33n</a></p>
+          <p>Desenvolvido por <a href={githubUrl} className="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">Alimsoftware</a></p>
           <div className="flex items-center justify-center gap-4 pt-2">
             <a href={`mailto:${email}`} className="flex items-center gap-1 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">
               <Mail className="w-3 h-3" />
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-4 text-xs opacity-75">
-          <p>This project is open-source under the MIT License. Contributions are welcome on GitHub.</p>
+          <p>Este projeto é de código aberto sob a Licença MIT. Contribuições são bem-vindas no GitHub.</p>
         </div>
       </div>
     </footer>

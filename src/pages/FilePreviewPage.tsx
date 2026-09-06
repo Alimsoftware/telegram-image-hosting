@@ -240,7 +240,7 @@ export function FilePreviewPage() {
               >
                 {copiedUrl === fileData.url ? (
                   <>
-                    <Check className="w-4 h-4" /> Copied
+                    <Check className="w-4 h-4" /> Copiado
                   </>
                 ) : (
                   "Copy"
@@ -253,13 +253,13 @@ export function FilePreviewPage() {
         {/* Viewed History Sidebar */}
         <div className="lg:w-80 lg:flex-shrink-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Recently Viewed</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Visualizados Recentemente</h2>
             {viewedHistory.length > 0 && (
               <button
                 onClick={clearViewHistory}
                 className="text-sm text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300"
               >
-                Clear All
+                Limpar Todos
               </button>
             )}
           </div>

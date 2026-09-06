@@ -169,7 +169,7 @@ export function PublicUpload() {
                 onClick={() => fileInputRef.current?.click()}
                 className="inline-flex items-center px-5 py-2.5 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition"
               >
-                Choose Files
+                Escolher arquivos
               </button>
               <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">Dica: Pressione Ctrl+V para colar da área de transferência</p>
             </div>

@@ -129,7 +129,7 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
           htmlFor="file-upload"
           className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 cursor-pointer transition-colors"
         >
-          Choose File
+          Escolher arquivos
         </label>
       </div>
 
@@ -157,7 +157,7 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
               disabled={isUploading}
               className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              {isUploading ? "Uploading..." : "Upload File"}
+              {isUploading ? "Enviando..." : "Enviar arquivo"}
             </button>
           </div>
         </div>
