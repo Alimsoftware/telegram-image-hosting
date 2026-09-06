@@ -8,15 +8,15 @@ id = "68461268f9c74d2a9e00f692076d6c84"
 preview_id = "69088be9ba19400983d1b14e3e74ecf5"
 
 [env.production]
-vars = { NODE_ENV = "production" }
+vars = { NODE_ENV = "development" }
 
 [[env.production.kv_namespaces]]
 binding = "app_data"
-id = "68461268f9c74d2a9e00f692076d6c84"
+id = "8a244d1b6e614bb08f6c26a50eb6d729"
 
 [env.preview]
 vars = { NODE_ENV = "development" }
 
 [[env.preview.kv_namespaces]]
 binding = "app_data"
-id = "68461268f9c74d2a9e00f692076d6c84"
+id = "8a244d1b6e614bb08f6c26a50eb6d729"
