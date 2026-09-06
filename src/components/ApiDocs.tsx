@@ -42,7 +42,7 @@ export function ApiDocs() {
   );
 
   const curlExample = `curl -X POST https://your-domain.com/api/upload \\
-  -H "X-API-Key: your-api-key-here" \\
+  -H "X-API-Key: sua-chave-de-api-aqui" \\
   -F "file=@/path/to/your/image.jpg"`;
 
   const jsExample = `const formData = new FormData();
@@ -51,7 +51,7 @@ formData.append('file', fileInput.files[0]);
 const response = await fetch('https://your-domain.com/api/upload', {
   method: 'POST',
   headers: {
-    'X-API-Key': 'your-api-key-here'
+    'X-API-Key': 'sua-chave-de-api-aqui'
   },
   body: formData
 });
@@ -62,7 +62,7 @@ console.log(result.url); // Your hosted image URL`;
   const pythonExample = `import requests
 
 url = "https://your-domain.com/api/upload"
-headers = {"X-API-Key": "your-api-key-here"}
+headers = {"X-API-Key": "sua-chave-de-api-aqui"}
 
 with open("image.jpg", "rb") as file:
     files = {"file": file}
@@ -90,10 +90,10 @@ print(result["url"])  # Your hosted image URL`;
             <Code className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            API Documentation
+            Documentação da API
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Integrate Telegram Image Hosting into your applications with our simple REST API.
+           Integre o Telegram Image Hosting em seus aplicativos com nossa API REST simples.
           </p>
         </div>
 
@@ -102,24 +102,24 @@ print(result["url"])  # Your hosted image URL`;
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200">
             <div className="flex items-center space-x-3 mb-6">
               <Key className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Authentication</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Autenticação</h2>
             </div>
             
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mb-6">
               <div className="flex items-center space-x-2">
                 <Info className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
                 <p className="text-yellow-800 dark:text-yellow-200">
-                  <strong>API Key Required:</strong> Contact the administrator to get your API key.
+                  <strong>Chave da API Necessária:</strong> Entre em contato com o administrador para obter sua chave da API.
                 </p>
               </div>
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              All API requests require authentication using an API key. Include your API key in the request headers:
+              Todas as solicitações de API requerem autenticação usando uma chave de API. Inclua sua chave de API nos cabeçalhos da solicitação:
             </p>
             
             <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-200">
-              X-API-Key: your-api-key-here
+              X-API-Key: sua-chave-de-api-aqui
             </div>
           </div>
 
@@ -127,7 +127,7 @@ print(result["url"])  # Your hosted image URL`;
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200">
             <div className="flex items-center space-x-3 mb-6">
               <Upload className="w-6 h-6 text-green-600 dark:text-green-400" />
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Upload File</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Enviar arquivo</h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -145,32 +145,32 @@ print(result["url"])  # Your hosted image URL`;
               </div>
             </div>
 
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Parameters</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Parâmetros</h3>
             <div className="overflow-x-auto mb-6">
               <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
                 <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Parameter</th>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Required</th>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Parâmetro</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Tipo</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Necessário</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Descrição</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                   <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">file</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">File</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Yes</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Image or video file (max 5MB)</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Arquivo</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Sim</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Imagem ou arquivo de vídeo (max 5MB)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Supported File Types</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Tipos de Arquivo Suportados</h3>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Images</h4>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Imagens</h4>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <li>• JPEG (.jpg, .jpeg)</li>
                   <li>• PNG (.png)</li>
@@ -179,7 +179,7 @@ print(result["url"])  # Your hosted image URL`;
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Videos</h4>
+                <h4 className="font-medium text-gray-700 dark:text-gray-300 mb-2">Vídeos</h4>
                 <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <li>• MP4 (.mp4)</li>
                   <li>• WebM (.webm)</li>
@@ -188,7 +188,7 @@ print(result["url"])  # Your hosted image URL`;
               </div>
             </div>
 
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Response</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Resposta</h3>
             <CodeBlock code={responseExample} language="JSON" id="response" />
           </div>
 
@@ -196,7 +196,7 @@ print(result["url"])  # Your hosted image URL`;
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200">
             <div className="flex items-center space-x-3 mb-6">
               <FileText className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Code Examples</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Exemplos de códigos</h2>
             </div>
 
             <div className="space-y-6">
@@ -219,37 +219,37 @@ print(result["url"])  # Your hosted image URL`;
 
           {/* Error Codes */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Error Codes</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Códigos de erro</h2>
             
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
                 <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Status Code</th>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Error</th>
-                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Código de status</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Erro</th>
+                    <th className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Descrição</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                   <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">400</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Bad Request</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">No file uploaded or invalid file type</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Requisição inválida</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Nenhum arquivo enviado ou tipo de arquivo inválido</td>
                   </tr>
                   <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">401</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Unauthorized</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Invalid or missing API key</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Não autorizado</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Chave API inválida ou ausente</td>
                   </tr>
                   <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">413</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Payload Too Large</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">File size exceeds 5MB limit</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Carga útil muito grande</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Tamanho do arquivo excede o limite de 5MB</td>
                   </tr>
                   <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">500</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Internal Server Error</td>
-                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Server error during upload</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Erro do Servidor Interno</td>
+                    <td className="border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm text-gray-900 dark:text-white">Erro no servidor durante o upload</td>
                   </tr>
                 </tbody>
               </table>
@@ -258,25 +258,25 @@ print(result["url"])  # Your hosted image URL`;
 
           {/* Rate Limits */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Rate Limits & Guidelines</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Limites e diretrizes de taxas</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Limits</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Limites</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li>• Maximum file size: 5MB</li>
-                  <li>• Rate limit: 30 uploads/hour (anonymous), 200/hour (API key)</li>
-                  <li>• Files are stored permanently</li>
-                  <li>• No authentication required for file access</li>
+                  <li>• Tamanho máximo do arquivo: 5MB</li>
+                  <li>• Limite de taxa: 30 envios/hora (anônimo), 200/hora (chave API)</li>
+                  <li>• Os arquivos são armazenados permanentemente</li>
+                  <li>• Nenhuma autenticação necessária para acesso a arquivos</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Best Practices</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Melhores Práticas</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li>• Optimize images before upload</li>
-                  <li>• Use appropriate file formats</li>
-                  <li>• Store returned URLs securely</li>
-                  <li>• Handle errors gracefully</li>
+                  <li>• Otimize as imagens antes do envio</li>
+                  <li>• Use formatos de arquivo apropriados</li>
+                  <li>• Armazene URLs retornados com segurança</li>
+                  <li>• Lidar com erros normalmente</li>
                 </ul>
               </div>
             </div>

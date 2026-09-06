@@ -157,7 +157,7 @@ export function FilePreviewPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4">
         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-gray-700 dark:text-gray-300 text-lg">
-          File data not available.
+          Dados do arquivo não disponíveis.
         </div>
       </div>
     );
@@ -198,25 +198,25 @@ export function FilePreviewPage() {
               onClick={handleZoomIn}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
             >
-              <ZoomIn className="w-5 h-5" /> Zoom In
+              <ZoomIn className="w-5 h-5" /> Aumentar Zoom
             </button>
             <button
               onClick={handleZoomOut}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
             >
-              <ZoomOut className="w-5 h-5" /> Zoom Out
+              <ZoomOut className="w-5 h-5" /> Diminuir Zoom
             </button>
             <button
               onClick={handleRotate}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
             >
-              <RotateCw className="w-5 h-5" /> Rotate
+              <RotateCw className="w-5 h-5" /> Girar
             </button>
             <button
               onClick={handleDownload}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 dark:bg-indigo-500 text-white hover:bg-indigo-700 dark:hover:bg-indigo-600 transition"
             >
-              <Download className="w-5 h-5" /> Save to Device
+              <Download className="w-5 h-5" /> Salvar para o dispositivo
             </button>
           </div>
 
@@ -224,7 +224,7 @@ export function FilePreviewPage() {
             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <Info className="w-4 h-4 text-gray-500 dark:text-gray-400" />
               <span>
-                Uploaded: {formatDate(fileData.uploadedAt)} • Size: {formatFileSize(fileData.size)} • Type: {fileData.fileType}
+                Enviado: {formatDate(fileData.uploadedAt)} • Tamanho: {formatFileSize(fileData.size)} • Tipo: {fileData.fileType}
               </span>
             </div>
             <div className="flex items-center gap-2 bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-200 dark:border-gray-600">
@@ -265,7 +265,7 @@ export function FilePreviewPage() {
           </div>
           <div className="space-y-3">
             {viewedHistory.length === 0 ? (
-              <p className="text-sm text-gray-500 dark:text-gray-400">No viewed history yet.</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Nenhum histórico de visualização ainda.</p>
             ) : (
               viewedHistory.map((entry) => (
                 <div

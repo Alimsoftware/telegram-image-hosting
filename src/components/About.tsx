@@ -4,26 +4,26 @@ import { Upload, Zap, Shield, Globe, Heart, Github, Cloud, Send, Mail } from "lu
 const infrastructureItems = [
   { label: "Frontend", value: "React 18 + TypeScript" },
   { label: "Backend", value: "Cloudflare Pages Functions" },
-  { label: "Storage", value: "Telegram Bot API" },
-  { label: "Metadata", value: "Cloudflare KV (analytics only)" },
-  { label: "CDN", value: "Cloudflare global network" },
-  { label: "Styling", value: "Tailwind CSS" },
+  { label: "Armazenamento", value: "API de bot de telegrama" },
+  { label: "Metadata", value: "Cloudflare KV (somente análise)" },
+  { label: "CDN", value: "Rede global Cloudflare" },
+  { label: "Estilo", value: "Tailwind CSS" },
 ];
 
 const specificationItems = [
-  { label: "Max file size", value: "5 MB per file" },
-  { label: "Supported formats", value: "JPEG, PNG, GIF, WebP, MP4, WebM, MOV" },
-  { label: "Upload methods", value: "Web UI, API, drag and drop, clipboard" },
-  { label: "API", value: "REST with API key authentication" },
-  { label: "Admin", value: "Dashboard with usage metrics and API key management" },
-  { label: "Response time", value: "Optimised for global delivery" },
+  { label: "Tamanho máximo do arquivo", value: "5 MB por arquivo" },
+  { label: "Formatos suportados", value: "JPEG, PNG, GIF, WebP, MP4, WebM, MOV" },
+  { label: "Métodos de envio", value: "UI da Web, API, arrastar e soltar, área de transferência" },
+  { label: "API", value: "REST com autenticação de chave API" },
+  { label: "Admin", value: "Dashboard com métricas de uso e gerenciamento de chaves de API" },
+  { label: "Tempo de resposta", value: "Otimizado para entrega global" },
 ];
 
 const acknowledgments = [
-  { icon: Cloud, label: "Powered by Cloudflare Pages", description: "Global CDN and serverless deployment for fast, reliable hosting." },
-  { icon: Send, label: "Free Hosting by Telegram", description: "Decentralized file storage via Telegram Bot API for permanent, secure uploads." },
-  { icon: Github, label: "Open Source on GitHub", description: "Fork, contribute, and self-deploy this project freely." },
-  { icon: Heart, label: "Built by Tas33n", description: "Created with passion for open-source self-hosting solutions. Contact: farhanisteak84@gmail.com | Telegram: @lamb3rt" },
+  { icon: Cloud, label: "Desenvolvido por páginas Cloudflare", description: "CDN global e implantação sem servidor para hospedagem rápida e confiável." },
+  { icon: Send, label: "Hospedagem Gratuita por Telegram", description: "Armazenamento descentralizado de arquivos via Telegram Bot API para uploads permanentes e seguros." },
+  { icon: Github, label: "Código aberto no GitHub", description: "Bifurque, contribua e auto-implante este projeto livremente." },
+  { icon: Heart, label: "Construído por Tas33n", description: "Criado com paixão por soluções de auto-hospedagem de código aberto. Contato: farhanisteak84@gmail.com | Telegram: @lamb3rt" },
 ];
 
 export function About() {
@@ -40,7 +40,7 @@ export function About() {
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Sobre o MemeIndex</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A free image and video hosting project that stores files through Telegram and serves them from Cloudflare Pages.
+            Um projeto gratuito de hospedagem de imagens e vídeos que armazena arquivos por meio do Telegram e os veicula nas páginas da Cloudflare.
           </p>
         </div>
 
