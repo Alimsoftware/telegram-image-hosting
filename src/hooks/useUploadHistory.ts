@@ -72,9 +72,25 @@ export function useUploadHistory() {
   const [sortMode, setSortMode] = useState<HistorySortMode>("recent");
 
   useEffect(() => {
-    setEntries(loadHistory());
+    const localEntries = loadHistory();
+    setEntries(localEntries);
     setViewMode(loadPreference(VIEW_KEY, "grid"));
     setSortMode(loadPreference(SORT_KEY, "recent"));
+
+    fetch("/api/uploads")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((payload: { uploads?: StoredUpload[] } | null) => {
+        if (!payload?.uploads) return;
+
+        setEntries((current) => {
+          const entriesById = new Map(current.map((entry) => [entry.id, entry]));
+          payload.uploads?.forEach((entry) => entriesById.set(entry.id, entry));
+          return Array.from(entriesById.values());
+        });
+      })
+      .catch((error) => {
+        console.warn("Failed to load remote upload history", error);
+      });
   }, []);
 
   useEffect(() => {

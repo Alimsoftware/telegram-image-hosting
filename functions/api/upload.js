@@ -3,6 +3,7 @@ import {
   fingerprintRequest,
   enforceRateLimit,
   saveUsageStats,
+  saveUploadMetadata,
   verifyApiKey,
   touchApiKeyUsage,
 } from "../utils/app-data.js";
@@ -98,7 +99,21 @@ export async function onRequestPost(context) {
     const origin = new URL(request.url).origin;
     const fileUrl = `${origin}/file/${encodedId}`;
 
-    // Removed saveFileMetadata call as per user request
+    try {
+      await saveUploadMetadata(env, {
+        id: encodedId,
+        fileId,
+        encodedFileId: encodedId,
+        url: fileUrl,
+        originalName: uploadFile.name,
+        size: uploadFile.size,
+        fileType: uploadFile.type,
+        uploadedAt: Date.now(),
+        viaApiKey: Boolean(apiKeyRecord),
+      });
+    } catch (error) {
+      console.error("Failed to save upload metadata", error);
+    }
 
     await saveUsageStats(env, fingerprint, {
       fileName: uploadFile.name,

@@ -132,6 +132,31 @@ export async function listUsageStats(env) {
   return { items, summary };
 }
 
+export async function saveUploadMetadata(env, upload) {
+  if (!env.app_data) return;
+
+  await env.app_data.put(`upload:${upload.encodedFileId}`, JSON.stringify(upload));
+}
+
+export async function listUploadMetadata(env) {
+  if (!env.app_data) return [];
+
+  const uploads = [];
+  let cursor;
+
+  do {
+    const result = await env.app_data.list({ prefix: "upload:", cursor });
+    cursor = result.cursor;
+
+    for (const entry of result.keys) {
+      const upload = await env.app_data.get(entry.name, { type: "json" });
+      if (upload) uploads.push(upload);
+    }
+  } while (cursor);
+
+  return uploads.sort((a, b) => (b.uploadedAt || 0) - (a.uploadedAt || 0));
+}
+
 export async function verifyApiKey(env, apiKey) {
   if (!env.app_data || !apiKey) return null;
   const keyName = `apikey:${apiKey}`;
