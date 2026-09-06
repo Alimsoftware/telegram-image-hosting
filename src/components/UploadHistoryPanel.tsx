@@ -40,7 +40,7 @@ export function UploadHistoryPanel({
   onRemove,
   onClear,
   onDownload,
-  title = "Upload History",
+  title = "Histórico de Envios",
   showWarning,
 }: UploadHistoryPanelProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -75,7 +75,7 @@ export function UploadHistoryPanel({
           </p>
           {showWarning && (
             <p className="mt-2 text-sm text-amber-600 dark:text-amber-400">
-              Upload history is stored only in your browser. Clearing cache or switching devices removes it.
+              O histórico de envios fica armazenado apenas no seu navegador. Limpar o cache ou trocar de dispositivo irá removê-lo.
             </p>
           )}
         </div>
@@ -93,7 +93,7 @@ export function UploadHistoryPanel({
             className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
           >
             <Trash2 className="w-4 h-4" />
-            Clear History
+            Limpar histórico
           </button>
         </div>
       </div>
@@ -106,7 +106,7 @@ export function UploadHistoryPanel({
               viewMode === "grid" ? "bg-gray-900 dark:bg-gray-700 text-white" : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
-            <GridIcon className="w-4 h-4" /> Grid
+            <GridIcon className="w-4 h-4" /> Grade
           </button>
           <button
             onClick={() => onViewModeChange("list")}
@@ -114,7 +114,7 @@ export function UploadHistoryPanel({
               viewMode === "list" ? "bg-gray-900 dark:bg-gray-700 text-white" : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
-            <ListIcon className="w-4 h-4" /> List
+            <ListIcon className="w-4 h-4" /> Lista
           </button>
         </div>
 
@@ -125,7 +125,7 @@ export function UploadHistoryPanel({
               sortMode === "recent" ? "bg-gray-900 dark:bg-gray-700 text-white" : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
-            <Clock className="w-4 h-4" /> Recent
+            <Clock className="w-4 h-4" /> Recente
           </button>
           <button
             onClick={() => onSortModeChange("name")}
@@ -133,7 +133,7 @@ export function UploadHistoryPanel({
               sortMode === "name" ? "bg-gray-900 dark:bg-gray-700 text-white" : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
-            <ArrowUpAZ className="w-4 h-4" /> Name
+            <ArrowUpAZ className="w-4 h-4" /> Nome
           </button>
           <button
             onClick={() => onSortModeChange("size")}
@@ -141,14 +141,14 @@ export function UploadHistoryPanel({
               sortMode === "size" ? "bg-gray-900 dark:bg-gray-700 text-white" : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
-            <ArrowDownWideNarrow className="w-4 h-4" /> Size
+            <ArrowDownWideNarrow className="w-4 h-4" /> Tamanho
           </button>
         </div>
       </div>
 
       {emptyState ? (
         <div className="rounded-xl border border-dashed border-gray-300 dark:border-gray-600 p-12 text-center text-gray-500 dark:text-gray-400">
-          No uploads yet. Upload something to start your personal history.
+          Nenhum envio ainda. Envie algo para iniciar seu histórico pessoal.
         </div>
       ) : viewMode === "grid" ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -184,11 +184,11 @@ export function UploadHistoryPanel({
                     >
                       {copiedId === entry.id ? (
                         <>
-                          <Check className="w-4 h-4" /> Copied
+                          <Check className="w-4 h-4" /> Copiado
                         </>
                       ) : (
                         <>
-                          <Copy className="w-4 h-4" /> Copy URL
+                          <Copy className="w-4 h-4" /> Copiar URL
                         </>
                       )}
                     </button>
@@ -198,7 +198,7 @@ export function UploadHistoryPanel({
                       to={`${entry.url}?a=view`} // Link to direct URL with ?a=view
                       className="inline-flex items-center gap-1 px-3 py-1 rounded border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-sm"
                     >
-                      <Eye className="w-4 h-4" /> Open
+                      <Eye className="w-4 h-4" /> Abrir
                     </RouterLink>
                   )}
                 </div>
@@ -211,10 +211,10 @@ export function UploadHistoryPanel({
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead>
               <tr className="text-left text-sm text-gray-500 dark:text-gray-400">
-                <th className="px-4 py-2 font-medium">File</th>
-                <th className="px-4 py-2 font-medium">Size</th>
-                <th className="px-4 py-2 font-medium">Uploaded</th>
-                <th className="px-4 py-2 font-medium">Actions</th>
+                <th className="px-4 py-2 font-medium">Arquivo</th>
+                <th className="px-4 py-2 font-medium">Tamanho</th>
+                <th className="px-4 py-2 font-medium">Enviado</th>
+                <th className="px-4 py-2 font-medium">Ações</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 dark:divide-gray-700 text-sm text-gray-700 dark:text-gray-300">
@@ -264,7 +264,7 @@ export function UploadHistoryPanel({
                           to={`${entry.url}?a=view`} // Link to direct URL with ?a=view
                           className="inline-flex items-center gap-1 px-2 py-1 rounded border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
                         >
-                          <Eye className="w-4 h-4" /> Open
+                          <Eye className="w-4 h-4" /> Abrir
                         </RouterLink>
                       )}
                       <button

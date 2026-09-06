@@ -130,9 +130,9 @@ export function PublicUpload() {
             <Upload className="w-10 h-10 text-white" />
           </div>
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Telegram Image Hosting</h1>
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">MemeIndex</h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Upload and share images or videos instantly. History lives in your browser, so you stay in control.
+              Envie e compartilhe imagens ou vídeos instantaneamente. O histórico vive no seu navegador, então você mantém o controle.
             </p>
           </div>
         </header>
@@ -149,9 +149,9 @@ export function PublicUpload() {
               onDrop={handleDrop}
             >
               <Upload className="w-12 h-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-              <p className="text-lg font-medium text-gray-900 dark:text-white mb-1">Drop files here or click to browse</p>
+              <p className="text-lg font-medium text-gray-900 dark:text-white mb-1">Solte arquivos aqui ou clique para navegar</p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                Images and videos up to 5MB • JPEG, PNG, GIF, WebP, MP4, WebM, MOV
+                Imagens e vídeos até 5MB • JPEG, PNG, GIF, WebP, MP4, WebM, MOV
               </p>
 
               <input
@@ -171,12 +171,12 @@ export function PublicUpload() {
               >
                 Choose Files
               </button>
-              <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">Tip: Press Ctrl+V to paste from clipboard</p>
+              <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">Dica: Pressione Ctrl+V para colar da área de transferência</p>
             </div>
 
             {selectedFiles.length > 0 && (
               <div className="mt-6 space-y-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Ready to upload</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Pronto para enviar</h3>
                 <div className="space-y-3">
                   {selectedFiles.map((file, index) => (
                     <div key={`${file.name}-${index}`} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl flex items-center justify-between">
@@ -203,13 +203,13 @@ export function PublicUpload() {
                     disabled={uploading}
                     className="flex-1 bg-indigo-600 dark:bg-indigo-500 text-white py-2.5 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {uploading ? "Uploading..." : `Upload ${selectedFiles.length} file${selectedFiles.length === 1 ? "" : "s"}`}
+                    {uploading ? "Enviando..." : `Enviar ${selectedFiles.length} arquivo${selectedFiles.length === 1 ? "" : "s"}`}
                   </button>
                   <button
                     onClick={() => setSelectedFiles([])}
                     className="px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                   >
-                    Clear
+                    Limpar
                   </button>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export function PublicUpload() {
           {responses.length > 0 && (
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Recent upload</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Envios recentes</h3>
                 <button onClick={clearResponses} className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
                   Dismiss
                 </button>
@@ -242,7 +242,7 @@ export function PublicUpload() {
                               {formatFileSize(result.size || 0)} • {result.fileType}
                             </p>
                           </div>
-                          <span className="text-xs text-green-600 dark:text-green-400">Saved to local history</span>
+                          <span className="text-xs text-green-600 dark:text-green-400">Salvo no histórico local</span>
                         </div>
                         <div className="flex flex-col sm:flex-row items-center gap-2 bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-200 dark:border-gray-600">
                           <Link className="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" />
@@ -258,10 +258,10 @@ export function PublicUpload() {
                             >
                               {copiedUrl === result.url ? (
                                 <>
-                                  <Check className="w-4 h-4" /> Copied
+                                  <Check className="w-4 h-4" /> Copiado
                                 </>
                               ) : (
-                                "Copy"
+                                "Copiar"
                               )}
                             </button>
                             {result.encodedFileId && (
@@ -269,7 +269,7 @@ export function PublicUpload() {
                                 to={`${result.url}?a=view`} // Link to direct URL with ?a=view
                                 className="inline-flex items-center gap-1 px-3 py-1 rounded border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-sm"
                               >
-                                <Eye className="w-4 h-4" /> Open
+                                <Eye className="w-4 h-4" /> Abrir
                               </RouterLink>
                             )}
                           </div>
@@ -277,7 +277,7 @@ export function PublicUpload() {
                       </div>
                     ) : (
                       <div className="text-red-700 dark:text-red-300">
-                        Upload failed: {result.error || "Unknown error"}
+                        Falha no envio: {result.error || "Erro desconhecido"}
                       </div>
                     )}
                   </div>

@@ -43,8 +43,8 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
     <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">API Keys</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Generate keys for programmatic uploads.</p>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Chaves API</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Gere chaves para uploads programáticos.</p>
         </div>
       </div>
 
@@ -61,13 +61,13 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 dark:bg-indigo-500 text-white hover:bg-indigo-700 dark:hover:bg-indigo-600 disabled:opacity-50"
         >
           <Plus className="w-4 h-4" />
-          {creating ? "Creating..." : "Create key"}
+          {creating ? "Criando..." : "Criar chave"}
         </button>
       </form>
 
       <div className="space-y-3">
         {loading && (
-          <div className="text-sm text-gray-500 dark:text-gray-400">Loading keys...</div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">Carregando chaves...</div>
         )}
 
         {keys.map((key) => (
@@ -77,7 +77,7 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
               <div>
                 <p className="font-mono text-sm text-gray-900 dark:text-white break-all">{key.key}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Created {formatDate(key.createdAt)} • Used {key.usageCount || 0} times
+                  Criado {formatDate(key.createdAt)} • Usado {key.usageCount || 0} vezes
                 </p>
               </div>
             </div>
@@ -99,7 +99,7 @@ export function ApiKeysPanel({ keys, loading, onCreate, onDelete }: ApiKeysPanel
         ))}
 
         {keys.length === 0 && !loading && (
-          <div className="text-sm text-gray-500 dark:text-gray-400">No API keys yet.</div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">Nenhuma chave API ainda.</div>
         )}
       </div>
     </section>

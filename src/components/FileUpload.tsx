@@ -44,7 +44,7 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
 
   const validateFile = (file: File) => {
     if (file.size > 5 * 1024 * 1024) {
-      setError("File size must be less than 5MB");
+      setError("O tamanho do arquivo deve ser menor que 5MB");
       return false;
     }
 
@@ -59,7 +59,7 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
     ];
 
     if (!allowedTypes.includes(file.type)) {
-      setError("Only images (JPEG, PNG, GIF, WebP) and videos (MP4, WebM, MOV) are allowed");
+      setError("Apenas imagens (JPEG, PNG, GIF, WebP) e vídeos (MP4, WebM, MOV) são permitidos");
       return false;
     }
 
@@ -76,10 +76,10 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
     const result = await onUpload(selectedFile);
 
     if (result.success) {
-      setSuccess("File uploaded successfully!");
+      setSuccess("Arquivo enviado com sucesso!");
       setSelectedFile(null);
     } else {
-      setError(result.error || "Upload failed");
+      setError(result.error || "Falha no upload");
     }
 
     setUploading(false);
@@ -101,7 +101,7 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
-      <h2 className="text-xl font-semibold text-gray-900 mb-4">Upload Files</h2>
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Enviar Arquivos</h2>
 
       <div
         className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
@@ -113,9 +113,9 @@ export function FileUpload({ onUpload, loading = false }: FileUploadProps) {
         onDrop={handleDrop}
       >
         <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-        <p className="text-lg font-medium text-gray-900 mb-2">Drop a file here or click to browse</p>
+        <p className="text-lg font-medium text-gray-900 mb-2">Solte um arquivo aqui ou clique para navegar</p>
         <p className="text-sm text-gray-500 mb-4">
-          Images and videos up to 5MB � JPEG, PNG, GIF, WebP, MP4, WebM, MOV
+          Imagens e vídeos até 5MB JPEG, PNG, GIF, WebP, MP4, WebM, MOV
         </p>
 
         <input

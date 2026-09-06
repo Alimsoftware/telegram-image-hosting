@@ -38,7 +38,7 @@ export function About() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
             <Upload className="w-12 h-12 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About telegram Image Hosting</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Sobre o MemeIndex</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A free image and video hosting project that stores files through Telegram and serves them from Cloudflare Pages.
           </p>
@@ -46,15 +46,15 @@ export function About() {
 
         <div className="max-w-6xl mx-auto space-y-12">
           <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Highlights</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Destacados</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: Upload, title: "Flexible uploads", body: "Drag and drop, paste from clipboard, or browse from disk." },
-                { icon: Zap, title: "Fast delivery", body: "Cloudflare edge nodes keep file downloads fast worldwide." },
-                { icon: Shield, title: "Secure storage", body: "Files live in a private Telegram channel managed by your bot." },
-                { icon: Globe, title: "Global access", body: "Optimised responses for users in every region." },
-                { icon: Heart, title: "Open source", body: "Self host and customise every part of the stack." },
-                { icon: Github, title: "Developer friendly", body: "Modern tooling and a simple API make contributions easy." },
+                { icon: Upload, title: "Uploads flexíveis", body: "Arraste e solte, cole da área de transferência ou navegue pelo disco." },
+                { icon: Zap, title: "Entrega rápida", body: "Nós de borda do Cloudflare mantêm os downloads de arquivos rápidos em todo o mundo." },
+                { icon: Shield, title: "Armazenamento seguro", body: "Os arquivos vivem em um canal privado do Telegram gerido pelo seu bot." },
+                { icon: Globe, title: "Acesso global", body: "Respostas otimizadas para usuários em cada região." },
+                { icon: Heart, title: "Código aberto", body: "Hospede e personalize cada parte da pilha." },
+                { icon: Github, title: "Amigável para desenvolvedores", body: "Ferramentas modernas e uma API simples tornam as contribuições fáceis." },
               ].map((item, index) => (
                 <div key={index} className="text-center transition-colors duration-200">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700">
@@ -68,10 +68,10 @@ export function About() {
           </section>
 
           <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Technical details</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Detalhes técnicos</h2>
             <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Infrastructure</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Infraestrutura</h3>
                 <ul className="space-y-2">
                   {infrastructureItems.map((item, index) => (
                     <li key={index}>
@@ -81,7 +81,7 @@ export function About() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Especificações</h3>
                 <ul className="space-y-2">
                   {specificationItems.map((item, index) => (
                     <li key={index}>
@@ -94,7 +94,7 @@ export function About() {
           </section>
 
           <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Acknowledgments</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Agradecimentos</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {acknowledgments.map((ack, index) => (
                 <div key={index} className="text-center transition-colors duration-200">
@@ -120,9 +120,9 @@ export function About() {
           </section>
 
           <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Need help?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Precisa de ajuda?</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Report bugs, suggest features, or share how you are using the project.
+              Reporte bugs, sugira recursos ou compartilhe como você está usando o projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

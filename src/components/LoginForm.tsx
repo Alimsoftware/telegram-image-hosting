@@ -29,14 +29,14 @@ export function LoginForm({ onLogin, loading }: LoginFormProps) {
           <div className="bg-indigo-100 dark:bg-indigo-900/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <LogIn className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Admin Login</h1>
-          <p className="text-gray-600 dark:text-gray-300 mt-2">Access your image hosting dashboard</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Login de Administrador</h1>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">Acesse seu painel de hospedagem de imagens</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="username" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Username
+              Nome de usuário
             </label>
             <input
               id="username"
@@ -44,14 +44,14 @@ export function LoginForm({ onLogin, loading }: LoginFormProps) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
-              placeholder="Enter your username"
+              placeholder="Digite seu nome de usuário"
               required
             />
           </div>
 
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Password
+              Senha
             </label>
             <div className="relative">
               <input
@@ -60,7 +60,7 @@ export function LoginForm({ onLogin, loading }: LoginFormProps) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 pr-12 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
-                placeholder="Enter your password"
+                placeholder="Digite sua senha"
                 required
               />
               <button
@@ -84,12 +84,12 @@ export function LoginForm({ onLogin, loading }: LoginFormProps) {
             disabled={loading}
             className="w-full bg-indigo-600 dark:bg-indigo-500 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
           >
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
 
         <div className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>Secure admin access to Telegram Image Hosting</p>
+          <p>Accesso seguro ao Painel do Administrador do MemeIndex</p>
         </div>
       </div>
     </div>
